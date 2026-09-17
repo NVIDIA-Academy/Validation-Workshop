@@ -34,6 +34,22 @@ body {
     margin-bottom: 32px;
 }
 
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 16px;
+    color: #4d4d4d;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+    color: #76B900;
+    text-decoration: underline;
+}
+
 .main-title {
     font-size: 32px;
     font-weight: 700;
@@ -299,6 +315,28 @@ body {
     border: 2px solid #0071C5;
 }
 
+.badge-requirement {
+    text-transform: none;
+}
+
+.badge-required {
+    background: #76B900;
+    color: #ffffff;
+    border: 2px solid #76B900;
+}
+
+.badge-optional {
+    background: #ffffff;
+    color: #1a1a1a;
+    border: 2px solid #0071C5;
+}
+
+.badge-not-applicable {
+    background: #e8e8e8;
+    color: #4d4d4d;
+    border: 2px solid #a8a8a8;
+}
+
 .duration {
     font-size: 13px;
     color: #666666;
@@ -435,6 +473,7 @@ body {
     <div class="container">
         <!-- Header -->
         <header class="header">
+            <a class="back-link" href="https://nvidia-academy.github.io/AI-Factory-Deployment/">&larr; Back to Training Overview</a>
             <h1 class="main-title">AI Factory Deployment Training</h1>
             <p class="subtitle">Validation Workshop</p>
         </header>
@@ -494,12 +533,42 @@ body {
                         <div class="section-body">
                             <div class="module-card">
                                 <div class="module-info">
-                                    <h3 class="module-title">AI Factory Validation Tools</h3>
-                                    <p class="module-desc">Validate your AI cluster's readiness for production workloads by running industry-standard benchmarks — HPL for compute stress testing, NCCL for GPU fabric performance, and Nemotron LLM training for real-world distributed workload validation — and interpreting results to identify and troubleshoot performance bottlenecks.</p>
+                                    <h3 class="module-title">Cabling Guide</h3>
+                                    <p class="module-desc">Implement NVIDIA cabling methodology for AI data centers, from physical design and documentation through staging, installation, and long-term maintenance. <a href="https://www.nvidia.com/en-us/training/academy/course-detail/?id=course%3A15885019" target="_blank" rel="noopener noreferrer" style="color: #76b900;">Learn more about this course</a></p>
                                 </div>
                                 <div class="module-meta">
                                     <span class="badge badge-self-paced">Self-Paced</span>
-                                    <span class="duration">1 hour</span>
+                                    <span class="duration">1 hour 10 mins</span>
+                                </div>
+                            </div>
+                            <div class="module-card">
+                                <div class="module-info">
+                                    <h3 class="module-title">AI Factory Validation Tools</h3>
+                                    <p class="module-desc">Validate AI cluster readiness by running HPL, NCCL, and Nemotron LLM training benchmarks and interpreting results to identify and troubleshoot performance bottlenecks. <a href="https://www.nvidia.com/en-us/training/academy/course-detail/?id=course%3A15885559" target="_blank" rel="noopener noreferrer" style="color: #76b900;">Learn more about this course</a></p>
+                                </div>
+                                <div class="module-meta">
+                                    <span class="badge badge-self-paced">Self-Paced</span>
+                                    <span class="duration">2 hours 30 mins</span>
+                                </div>
+                            </div>
+                            <div class="module-card">
+                                <div class="module-info">
+                                    <h3 class="module-title">Cable Validation Tool (CVT)</h3>
+                                    <p class="module-desc">Plan, deploy, and operate NVIDIA Cable Validation Tool by preparing prerequisites, installing the Collector, creating a Unified P2P file, and validating and troubleshooting the fabric. <a href="https://www.nvidia.com/en-us/training/academy/course-detail/?id=course%3A15853439" target="_blank" rel="noopener noreferrer" style="color: #76b900;">Learn more about this course</a></p>
+                                </div>
+                                <div class="module-meta">
+                                    <span class="badge badge-self-paced">Self-Paced</span>
+                                    <span class="duration">2 hours</span>
+                                </div>
+                            </div>
+                            <div class="module-card">
+                                <div class="module-info">
+                                    <h3 class="module-title">ClusterMinder Fundamentals</h3>
+                                    <p class="module-desc">Learn how to deploy, administer, and optimize NVIDIA ClusterMinder to monitor GPU cluster health, detect issues, and integrate alerting. <a href="https://www.nvidia.com/en-us/training/academy/course-detail/?id=course%3A16449049" target="_blank" rel="noopener noreferrer" style="color: #76b900;">Learn more about this course</a></p>
+                                </div>
+                                <div class="module-meta">
+                                    <span class="badge badge-self-paced">Self-Paced</span>
+                                    <span class="duration">3 hours</span>
                                 </div>
                             </div>
                         </div>
@@ -509,12 +578,12 @@ body {
                 <div class="tab-content sections-single" id="outline-tab">
                     <section class="content-section">
                         <div class="section-header">
-                            <h2 class="section-title">2 Sessions</h2>
+                            <h2 class="section-title">2 Days</h2>
                         </div>
                         <div class="section-body">
                             <div class="module-card workshop-card">
                                 <div class="module-info">
-                                    <h3 class="module-title">Session 1 — Infrastructure and Communication Validation</h3>
+                                    <h3 class="module-title">Day 1 — Infrastructure and Communication Validation</h3>
                                     <ul class="module-list">
                                         <li>Validation Methodology + Lab 1 Setup</li>
                                         <li>Lab 2 - ClusterMinder + CVT</li>
@@ -529,7 +598,7 @@ body {
                             </div>
                             <div class="module-card workshop-card">
                                 <div class="module-info">
-                                    <h3 class="module-title">Session 2 — Stress, Benchmark, and Workload Validation</h3>
+                                    <h3 class="module-title">Day 2 — Stress, Benchmark, and Workload Validation</h3>
                                     <ul class="module-list">
                                         <li>Lab 5 - MNubergemm</li>
                                         <li>Lab 6 - HPL / HPL-MxP</li>
@@ -552,7 +621,7 @@ body {
         <footer class="footer">
             <div class="footer-left">
                 <p class="footer-url"><a href="https://www.nvidia.com/en-us/training/academy/" target="_blank" style="color: #000000;" style="text-decoration: none;" >ACADEMY.NVIDIA.COM</a></p>
-                <p class="footer-date">LAST UPDATED 2026-07-22</p>
+                <p class="footer-date">LAST UPDATED 2026-07-16</p>
             </div>
             <div class="footer-right">
                 <svg class="nvidia-logo" viewBox="0 0 2490.55 459.6" xmlns="http://www.w3.org/2000/svg">
@@ -580,6 +649,28 @@ body {
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
+
+    const prerequisiteRequirements = new Map([
+        ['Cabling Guide', 'Required'],
+        ['AI Factory Validation Tools', 'Required'],
+        ['Cable Validation Tool (CVT)', 'Required'],
+        ['ClusterMinder Fundamentals', 'Required']
+    ]);
+
+    document.querySelectorAll('#prerequisites-tab .module-card').forEach(card => {
+        const title = card.querySelector('.module-title')?.textContent.trim();
+        const requirement = prerequisiteRequirements.get(title);
+        const meta = card.querySelector('.module-meta');
+
+        if (!requirement || !meta) {
+            return;
+        }
+
+        const requirementBadge = document.createElement('span');
+        requirementBadge.className = 'badge badge-requirement badge-required';
+        requirementBadge.textContent = requirement;
+        meta.insertBefore(requirementBadge, meta.querySelector('.duration'));
+    });
 
     // Handle tab button clicks
     tabButtons.forEach(button => {
