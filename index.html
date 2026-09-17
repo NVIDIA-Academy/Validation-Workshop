@@ -315,6 +315,28 @@ body {
     border: 2px solid #0071C5;
 }
 
+.badge-requirement {
+    text-transform: none;
+}
+
+.badge-required {
+    background: #76B900;
+    color: #ffffff;
+    border: 2px solid #76B900;
+}
+
+.badge-optional {
+    background: #ffffff;
+    color: #1a1a1a;
+    border: 2px solid #0071C5;
+}
+
+.badge-not-applicable {
+    background: #e8e8e8;
+    color: #4d4d4d;
+    border: 2px solid #a8a8a8;
+}
+
 .duration {
     font-size: 13px;
     color: #666666;
@@ -627,6 +649,28 @@ body {
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
+
+    const prerequisiteRequirements = new Map([
+        ['Cabling Guide', 'Required'],
+        ['AI Factory Validation Tools', 'Required'],
+        ['Cable Validation Tool (CVT)', 'Required'],
+        ['ClusterMinder Fundamentals', 'Required']
+    ]);
+
+    document.querySelectorAll('#prerequisites-tab .module-card').forEach(card => {
+        const title = card.querySelector('.module-title')?.textContent.trim();
+        const requirement = prerequisiteRequirements.get(title);
+        const meta = card.querySelector('.module-meta');
+
+        if (!requirement || !meta) {
+            return;
+        }
+
+        const requirementBadge = document.createElement('span');
+        requirementBadge.className = 'badge badge-requirement badge-required';
+        requirementBadge.textContent = requirement;
+        meta.insertBefore(requirementBadge, meta.querySelector('.duration'));
+    });
 
     // Handle tab button clicks
     tabButtons.forEach(button => {
