@@ -283,8 +283,13 @@ body {
 }
 
 .badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     width: 78px;
+    min-width: 78px;
+    max-width: 78px;
     padding: 3px 8px;
     font-size: 10.45px;
     font-weight: 500;
@@ -555,7 +560,7 @@ body {
                             </div>
                             <div class="module-card">
                                 <div class="module-info">
-                                    <h3 class="module-title">Cable Validation Tool (CVT)</h3>
+                                    <h3 class="module-title">Cable Validation Tool (CVT) Fundamentals</h3>
                                     <p class="module-desc">Plan, deploy, and operate NVIDIA Cable Validation Tool by preparing prerequisites, installing the Collector, creating a Unified P2P file, and validating and troubleshooting the fabric. <a href="https://www.nvidia.com/en-us/training/academy/course-detail/?id=course%3A15853439" target="_blank" rel="noopener noreferrer" style="color: #76b900;">Learn more about this course</a></p>
                                 </div>
                                 <div class="module-meta">
@@ -655,7 +660,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const prerequisiteRequirements = new Map([
         ['Cabling Guide', 'Required'],
         ['AI Factory Validation Tools', 'Required'],
-        ['Cable Validation Tool (CVT)', 'Required'],
+        ['Cable Validation Tool (CVT) Fundamentals', 'Required'],
         ['ClusterMinder Fundamentals', 'Required']
     ]);
 
